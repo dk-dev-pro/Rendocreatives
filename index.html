@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Project</title>
+
+</head>
+
+<style>
+
+/*CSS RESET*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    background-color: yellow;
+    min-height: 300vh;
+    animation: mainBackground;
+    animation-timeline: scroll();
+    scroll-behavior: smooth;
+  }
+  
+@keyframes mainBackground {
+    to {background-color: darkslategray;}
+}
+
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+.scrollMain {
+    position: fixed;
+	margin-left: 175px;
+}
+
+.productMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 90px 0;
+}
+
+.productBackground {
+    height: 350px;
+    width: 500px;
+    background-color: greenyellow;
+    animation: animationProductBackground;
+    animation-timeline: scroll();
+
+}
+@keyframes animationProductBackground {
+    to {background-color: tomato;}
+}
+
+.p1 {
+	height: 375px;
+}
+.productItem1 {
+	position: absolute;
+	bottom: -25px;
+	animation: animationProduct1;
+    animation-timeline: scroll();
+	
+}
+
+@keyframes animationProduct1 {
+    from {opactiy: 1;}
+	to {opacity: 0;}
+}
+
+.productItem2 {
+	opacity: 0;
+	bottom: -25px;
+	position: absolute;
+	animation: animationProduct2;
+    animation-timeline: scroll();
+}
+
+@keyframes animationProduct2 {
+	to {opacity: 1;}
+}
+
+
+.p2 {
+	height: 375px;
+}
+
+.productName {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 100px;
+    white-space: nowrap;
+    position: absolute;
+    margin-left: 1000px;
+    opacity: 0;
+    animation: animationProductName;
+    animation-timeline: scroll();
+}
+@keyframes animationProductName {
+    to {margin-left: -1000px;
+        }
+    50% {
+            opacity: 1;
+        }
+}
+.logo {
+	height: 75px;
+}
+.aboutusButton {
+	background: none;
+	padding: 10px 40px;
+	border-radius: 100px;
+	color: black;
+	border-color: black;
+	animation: bcolor;
+	animation-timeline: scroll();
+}
+@keyframes bcolor {
+    to {color: white;
+	border-color: white;}
+}
+
+.scrollHeader {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 275px;
+}
+
+
+.scrollFooter {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 300px;
+	margin-left: 500px;
+}
+
+a {
+	color: black;
+	animation: acolor;
+	animation-timeline: scroll();
+}
+
+@keyframes acolor {
+    to {color: red;}
+}
+
+.scrollDiv {
+	color: black;
+	animation: scolor;
+	animation-timeline: scroll();
+}
+
+@keyframes scolor {
+    to {color: red;}
+}
+
+.titleDiv {
+	color: black;
+	animation: tcolor;
+	animation-timeline: scroll();
+}
+
+@keyframes tcolor {
+    to {color: white;}
+}
+
+</style>
+
+<body>
+    
+
+    <main class="scrollMain">
+        <div class="scrollHeader">
+			<div><img class="logo" src="./logo.svg"></div>
+			<div class= "titleDiv">Fusion of tradition meets exhilaration</div>
+			<div><button class="aboutusButton">About Us</button></div>
+		</div>
+        <div class="productMain">
+            <div class="productBackground"></div>
+            <div class="productItem1">
+				<img class="p1" src="./1.svg">
+			</div>
+			<div class="productItem2">
+				<img class="p2" src="./2.svg">
+			</div>
+			
+            <div class="productName">
+                Arada Lemon
+            </div>
+        </div>
+        <div class="scrollFooter">
+		<div class="scrollDiv">( SCROLL )</div>
+		<div><a href="#">Read More</a></div>
+		</div>
+    </main>
+
+
+</body>
+</html>
