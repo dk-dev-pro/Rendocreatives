@@ -1,0 +1,180 @@
+/*CSS RESET*/
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    background-color: yellow;
+    min-height: 5000vh;
+    animation: mainBackground;
+    animation-timeline: scroll();
+    scroll-behavior: smooth;
+}
+
+@keyframes mainBackground {
+    25% {background-color: #af8787;}
+    50% {background-color: #001a01;}
+    100% {background-color: #b2992d;}
+}
+
+ol, ul {
+    list-style: none;
+}
+
+
+.scrollMain {
+    top: 0;
+    bottom: 0;
+    left: 200px;
+    right: 200px;
+    position: fixed;
+
+}
+
+.scrollHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 75px;
+}
+.aboutusButton {
+    background: none;
+    padding: 10px 40px;
+    border-radius: 100px;
+    color: black;
+    border-color: black;
+    animation: bcolor;
+    animation-timeline: scroll();
+}
+@keyframes bcolor {
+    to {color: white;
+        border-color: white;}
+}
+
+
+.productMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.productBackground {
+    display: flex;
+    height: 400px;
+    width: 650px;
+    overflow: clip;
+    /*overflow-x: scroll;*/
+    margin-bottom: -1000px;
+    animation: a2 900ms forwards;
+    position: absolute;
+    margin-top: 400px;
+    z-index: -1;
+    /*scroll-snap-type: x mandatory;*/
+}
+@keyframes a2 {
+    to {
+        margin-bottom: 0;
+    }
+}
+/*.i {*/
+/*    scroll-snap-align: start;*/
+/*}*/
+.i1 {
+    animation: a1;
+    animation-timeline: scroll();
+}
+@keyframes a1 {
+    to {
+        margin-left: -1950px;
+    }
+}
+
+
+.productName {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150px;
+    white-space: nowrap;
+    position: absolute;
+    display: flex;
+    gap: 350px;
+    margin-top: 400px;
+    margin-left: 3750px;
+    animation: animationProductName;
+    animation-timeline: scroll();
+}
+@keyframes animationProductName {
+    to {margin-left: -3750px;
+    }
+}
+
+/*EACH TEXT*/
+.t2 {
+    color: orange;
+}
+.t3 {
+    color: red;
+}
+.t4 {
+    color: white;
+}
+
+/* FOOTER */
+
+.scrollFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 400px;
+    padding: 50px;
+    background-color: yellow;
+    animation: mainBackground;
+    animation-timeline: scroll();
+}
+
+a {
+    color: black;
+    animation: scolor;
+    animation-timeline: scroll();
+}
+
+.scrollDiv {
+    color: black;
+    animation: scolor;
+    animation-timeline: scroll();
+}
+
+.pageNumberCounter {
+    color: black;
+    animation: scolor;
+    animation-timeline: scroll();
+}
+
+@keyframes scolor {
+    50% {color: red;}
+    100% {color: white;}
+}
+
+
+.titleDiv {
+    color: black;
+    animation: tcolor;
+    animation-timeline: scroll();
+}
+
+@keyframes tcolor {
+    to {color: white;}
+}
